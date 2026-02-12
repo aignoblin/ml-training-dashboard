@@ -1,73 +1,85 @@
-# React + TypeScript + Vite
+# ML Training Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive ML training dashboard built with React, TypeScript, and Tailwind CSS. Features 5 unique design variants and comprehensive training management UI.
 
-Currently, two official plugins are available:
+## 🌐 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**[https://aignoblin.github.io/ml-training-dashboard/](https://aignoblin.github.io/ml-training-dashboard/)**
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Upload & Train Page
+- 📁 Drag & drop file upload area
+- ⚙️ Training configuration (model type, epochs, batch size, learning rate, optimizer)
+- ▶️ Big animated RUN button
+- 📊 Live progress bar with animation
+- 📈 Real-time statistics display (epoch, loss, accuracy, time)
 
-## Expanding the ESLint configuration
+### Metrics Dashboard
+- 🎯 Key metrics cards (accuracy, loss, experiments, training time)
+- 📉 Training visualization charts (loss & accuracy over epochs)
+- 📋 Training history table
+- 🧪 Experiments list with status
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🎨 5 Design Variants
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Switch themes instantly via the dropdown in the header:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+| Variant | Description |
+|---------|-------------|
+| **Clean Minimal** | White/gray professional look |
+| **Dark Tech** | Slate/cyan cyberpunk aesthetic |
+| **Gradient Modern** | Purple/pink gradient glassmorphism |
+| **Dashboard Cards** | Blue corporate card-based design |
+| **Terminal CLI** | Green-on-black retro terminal style |
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🛠️ Tech Stack
+
+- **React 19** with TypeScript
+- **Tailwind CSS 3** for styling
+- **Vite** for build tooling
+- **React Router** for navigation
+- **Lucide React** for icons
+
+## 🚀 Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Deploy to GitHub Pages
+npm run deploy
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📁 Project Structure
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+src/
+├── components/
+│   ├── Layout.tsx       # Main layout wrapper
+│   ├── ProgressBar.tsx  # Animated progress component
+│   ├── StatCard.tsx     # Statistics card component
+│   └── ThemeSwitcher.tsx # Theme selector dropdown
+├── contexts/
+│   └── ThemeContext.tsx # Theme state & configuration
+├── pages/
+│   ├── UploadPage.tsx   # Training upload & config
+│   └── MetricsPage.tsx  # Metrics dashboard
+├── App.tsx              # Main app with routing
+├── main.tsx             # Entry point
+└── index.css            # Global styles & animations
+```
+
+## 👤 Built For
+
+Petr (@Petr_Golenderov / GitHub: Gainward777)
+
+## 📄 License
+
+MIT
